@@ -33,9 +33,3 @@ A static recreation of the Spotify web application interface, built with HTML, C
 └── js/
     └── script.js
 ```
-
-## Contributing
-This is a static project for learning purposes. Contributions are welcome for improvements or bug fixes.
-
-## License
-MIT License (or specify as needed).
