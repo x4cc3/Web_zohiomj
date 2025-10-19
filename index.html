@@ -1,10 +1,367 @@
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Flytify</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <link rel="stylesheet" href="css/styles.css">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flytify Web Player</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="css/styles.css" />
     </head>
-    <body
+    <body>
+        <div class="container">
+            <!-- Sidebar Navigation -->
+            <aside class="sidebar">
+                <div class="logo">
+                    <i class="fas fa-music"></i>
+                    <span>Flytify</span>
+                </div>
+
+                <nav class="main-nav">
+                    <ul>
+                        <li class="nav-item active">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </li>
+                        <li class="nav-item">
+                            <i class="fas fa-search"></i>
+                            <span>Search</span>
+                        </li>
+                        <li class="nav-item">
+                            <i class="fas fa-book"></i>
+                            <span>Your Library</span>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="playlists">
+                    <div class="playlist-header">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Create Playlist</span>
+                    </div>
+                    <div class="playlist-header">
+                        <i class="fas fa-heart"></i>
+                        <span>Liked Songs</span>
+                    </div>
+
+                    <div class="playlist-list">
+                        <div class="playlist-item">My Playlist #1</div>
+                        <div class="playlist-item">Discover Weekly</div>
+                        <div class="playlist-item">Chill Vibes</div>
+                        <div class="playlist-item">Workout Mix</div>
+                        <div class="playlist-item">Road Trip</div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <!-- Top Navigation Bar -->
+                <header class="top-nav">
+                    <div class="nav-controls">
+                        <button class="nav-arrow">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="nav-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input
+                            type="text"
+                            placeholder="Search for artists, songs, or podcasts"
+                        />
+                    </div>
+
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            <img src="https://i.pravatar.cc/300" alt="User" />
+                        </div>
+                        <span class="username">User Name</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </header>
+
+                <!-- Content Sections -->
+                <section class="content">
+                    <div class="content-header">
+                        <h1>Good afternoon</h1>
+                        <div class="view-all">Show all</div>
+                    </div>
+
+                    <!-- Recently Played Grid -->
+                    <div class="recently-played">
+                        <div class="playlist-card">
+                            <div class="card-image">
+                                <img
+                                    src="https://source.unsplash.com/random/150x150/?album,cover,1"
+                                    alt="Playlist"
+                                />
+                            </div>
+                            <div class="card-title">Liked Songs</div>
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+
+                        <div class="playlist-card">
+                            <div class="card-image">
+                                <img
+                                    src="https://source.unsplash.com/random/150x150/?album,cover,2"
+                                    alt="Playlist"
+                                />
+                            </div>
+                            <div class="card-title">Discover Weekly</div>
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+
+                        <div class="playlist-card">
+                            <div class="card-image">
+                                <img
+                                    src="https://source.unsplash.com/random/150x150/?album,cover,3"
+                                    alt="Playlist"
+                                />
+                            </div>
+                            <div class="card-title">My Playlist #1</div>
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+
+                        <div class="playlist-card">
+                            <div class="card-image">
+                                <img
+                                    src="https://source.unsplash.com/random/150x150/?album,cover,4"
+                                    alt="Playlist"
+                                />
+                            </div>
+                            <div class="card-title">Chill Vibes</div>
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+
+                        <div class="playlist-card">
+                            <div class="card-image">
+                                <img
+                                    src="https://source.unsplash.com/random/150x150/?album,cover,5"
+                                    alt="Playlist"
+                                />
+                            </div>
+                            <div class="card-title">Workout Mix</div>
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+
+                        <div class="playlist-card">
+                            <div class="card-image">
+                                <img
+                                    src="https://source.unsplash.com/random/150x150/?album,cover,6"
+                                    alt="Playlist"
+                                />
+                            </div>
+                            <div class="card-title">Road Trip</div>
+                            <button class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Made For You Section -->
+                    <div class="section-header">
+                        <h2>Made for You</h2>
+                        <div class="view-all">Show all</div>
+                    </div>
+
+                    <div class="album-grid">
+                        <div class="album-card">
+                            <div class="album-image">
+                                <img
+                                    src="https://source.unsplash.com/random/200x200/?album,cover,7"
+                                    alt="Album"
+                                />
+                                <button class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                            <div class="album-title">Daily Mix 1</div>
+                            <div class="album-description">
+                                Mix of Artist1, Artist2 and more
+                            </div>
+                        </div>
+
+                        <div class="album-card">
+                            <div class="album-image">
+                                <img
+                                    src="https://source.unsplash.com/random/200x200/?album,cover,8"
+                                    alt="Album"
+                                />
+                                <button class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                            <div class="album-title">Daily Mix 2</div>
+                            <div class="album-description">
+                                Mix of Artist3, Artist4 and more
+                            </div>
+                        </div>
+
+                        <div class="album-card">
+                            <div class="album-image">
+                                <img
+                                    src="https://source.unsplash.com/random/200x200/?album,cover,9"
+                                    alt="Album"
+                                />
+                                <button class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                            <div class="album-title">Release Radar</div>
+                            <div class="album-description">
+                                Catch all the latest music from artists you
+                                follow
+                            </div>
+                        </div>
+
+                        <div class="album-card">
+                            <div class="album-image">
+                                <img
+                                    src="https://source.unsplash.com/random/200x200/?album,cover,10"
+                                    alt="Album"
+                                />
+                                <button class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                            <div class="album-title">Chill Hits</div>
+                            <div class="album-description">
+                                Kick back to the best new and recent chill hits
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recently Played Tracks -->
+                    <div class="section-header">
+                        <h2>Recently Played</h2>
+                    </div>
+
+                    <div class="tracks-list">
+                        <div class="track-row">
+                            <div class="track-info">
+                                <div class="track-number">1</div>
+                                <div class="track-image">
+                                    <img
+                                        src="https://source.unsplash.com/random/50x50/?album,cover,11"
+                                        alt="Track"
+                                    />
+                                </div>
+                                <div class="track-details">
+                                    <div class="track-title">Song Title 1</div>
+                                    <div class="track-artist">Artist Name</div>
+                                </div>
+                            </div>
+                            <div class="track-album">Album Name</div>
+                            <div class="track-date">2 days ago</div>
+                            <div class="track-duration">3:45</div>
+                        </div>
+
+                        <div class="track-row">
+                            <div class="track-info">
+                                <div class="track-number">2</div>
+                                <div class="track-image">
+                                    <img
+                                        src="https://source.unsplash.com/random/50x50/?album,cover,12"
+                                        alt="Track"
+                                    />
+                                </div>
+                                <div class="track-details">
+                                    <div class="track-title">Song Title 2</div>
+                                    <div class="track-artist">Artist Name</div>
+                                </div>
+                            </div>
+                            <div class="track-album">Album Name</div>
+                            <div class="track-date">3 days ago</div>
+                            <div class="track-duration">4:12</div>
+                        </div>
+
+                        <div class="track-row">
+                            <div class="track-info">
+                                <div class="track-number">3</div>
+                                <div class="track-image">
+                                    <img
+                                        src="https://source.unsplash.com/random/50x50/?album,cover,13"
+                                        alt="Track"
+                                    />
+                                </div>
+                                <div class="track-details">
+                                    <div class="track-title">Song Title 3</div>
+                                    <div class="track-artist">Artist Name</div>
+                                </div>
+                            </div>
+                            <div class="track-album">Album Name</div>
+                            <div class="track-date">5 days ago</div>
+                            <div class="track-duration">3:28</div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Music Player -->
+            <footer class="player">
+                <div class="now-playing">
+                    <div class="track-image">
+                        <img
+                            src="https://source.unsplash.com/random/60x60/?album,cover,14"
+                            alt="Now Playing"
+                        />
+                    </div>
+                    <div class="track-details">
+                        <div class="track-title">Now Playing Song</div>
+                        <div class="track-artist">Artist Name</div>
+                    </div>
+                    <div class="track-actions">
+                        <button><i class="far fa-heart"></i></button>
+                        <button><i class="far fa-window-restore"></i></button>
+                    </div>
+                </div>
+
+                <div class="playback-controls">
+                    <div class="control-buttons">
+                        <button><i class="fas fa-random"></i></button>
+                        <button><i class="fas fa-step-backward"></i></button>
+                        <button class="play-pause">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button><i class="fas fa-step-forward"></i></button>
+                        <button><i class="fas fa-redo"></i></button>
+                    </div>
+                    <div class="progress-bar">
+                        <span class="time-current">0:00</span>
+                        <div class="progress-container">
+                            <div class="progress"></div>
+                        </div>
+                        <span class="time-total">3:45</span>
+                    </div>
+                </div>
+
+                <div class="volume-controls">
+                    <button><i class="fas fa-list"></i></button>
+                    <button><i class="fas fa-laptop"></i></button>
+                    <button><i class="fas fa-volume-up"></i></button>
+                    <div class="volume-slider">
+                        <div class="volume-progress"></div>
+                    </div>
+                    <button><i class="fas fa-expand-alt"></i></button>
+                </div>
+            </footer>
+        </div>
+
+        <script src="js/script.js"></script>
+    </body>
 </html>
