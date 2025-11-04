@@ -1,0 +1,205 @@
+/* Tablet View - 768px and below */
+@media screen and (max-width: 768px) {
+    :root {
+        --sidebar-width: 80px;
+        --player-height: 80px;
+    }
+    
+    /* Sidebar Compact */
+    .sidebar {
+        width: var(--sidebar-width);
+        padding: var(--spacing-md) 0;
+    }
+    
+    .logo h1,
+    .nav-item span,
+    .create-playlist-btn span {
+        display: none;
+    }
+    
+    .logo {
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .nav-item {
+        justify-content: center;
+    }
+    
+    .create-playlist-btn {
+        justify-content: center;
+    }
+    
+    /* Main Content */
+    .main-content {
+        margin-left: var(--sidebar-width);
+    }
+    
+    /* Playlist Cards */
+    .playlist-cards {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: var(--spacing-sm);
+    }
+    
+    .recent-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    /* Detail Header */
+    .detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .detail-cover {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .detail-info h1 {
+        font-size: 32px;
+    }
+    
+    /* Player */
+    .player-right {
+        gap: var(--spacing-xs);
+    }
+    
+    .volume-container {
+        width: 60px;
+    }
+}
+
+/* Mobile View - 480px and below */
+@media screen and (max-width: 480px) {
+    :root {
+        --sidebar-width: 0;
+        --player-height: 70px;
+    }
+    
+    /* Hide Sidebar on Mobile */
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform var(--transition-normal);
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+        width: 240px;
+        z-index: 1000;
+    }
+    
+    /* Main Content Full Width */
+    .main-content {
+        margin-left: 0;
+        padding: var(--spacing-md);
+    }
+    
+    /* Top Bar */
+    .top-bar {
+        padding: var(--spacing-sm);
+        margin: calc(var(--spacing-md) * -1);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .btn-upgrade {
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+    
+    /* Grids */
+    .playlist-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .recent-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .genre-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Detail */
+    .detail-header {
+        padding: var(--spacing-md);
+    }
+    
+    .detail-cover {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .detail-info h1 {
+        font-size: 24px;
+    }
+    
+    .detail-actions {
+        gap: var(--spacing-md);
+    }
+    
+    .btn-play-big {
+        width: 48px;
+        height: 48px;
+    }
+    
+    /* Player Bar Mobile */
+    .player-bar {
+        padding: 0 var(--spacing-sm);
+        height: var(--player-height);
+    }
+    
+    .player-left {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .now-playing-cover {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .now-playing-info h4 {
+        font-size: 12px;
+    }
+    
+    .now-playing-info p {
+        font-size: 11px;
+    }
+    
+    .player-center {
+        flex: 0 0 auto;
+        position: absolute;
+        bottom: calc(var(--player-height) + 10px);
+        left: 0;
+        right: 0;
+        background-color: var(--bg-secondary);
+        padding: var(--spacing-sm);
+        border-top: 1px solid var(--border-color);
+        display: none;
+    }
+    
+    .player-center.expanded {
+        display: flex;
+    }
+    
+    .player-right {
+        display: none;
+    }
+    
+    .btn-control .icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Track List */
+    .track-list th:nth-child(3),
+    .track-list td:nth-child(3) {
+        display: none;
+    }
+    
+    /* Search */
+    .search-container {
+        max-width: 100%;
+    }
+}

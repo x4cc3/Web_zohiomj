@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - var(--player-height));
+    position: relative;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    background: linear-gradient(180deg, var(--bg-tertiary) 0%, var(--bg-primary) 300px);
+    overflow-y: auto;
+    padding: var(--spacing-lg);
+}
+
+/* Content Sections */
+.content-section {
+    animation: fadeIn var(--transition-normal);
+}
+
+.content-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: var(--text-primary);
+    font-family: inherit;
+    transition: all var(--transition-fast);
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.btn-upgrade {
+    background-color: var(--primary-blue);
+    color: var(--text-primary);
+    padding: 8px 24px;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 14px;
+    transition: all var(--transition-fast);
+}
+
+.btn-upgrade:hover {
+    background-color: var(--primary-blue-hover);
+    transform: scale(1.05);
+}
+
+/* Icons */
+.icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+    opacity: 0.7;
+    transition: opacity var(--transition-fast);
+}
+
+button:hover .icon,
+.nav-item:hover .icon {
+    opacity: 1;
+}
+
+.nav-item.active .icon {
+    opacity: 1;
+    filter: brightness(0) invert(1);
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    margin: calc(var(--spacing-lg) * -1);
+    margin-bottom: var(--spacing-lg);
+    background-color: rgba(10, 14, 20, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.nav-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition-fast);
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.nav-btn .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.btn-profile {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    background-color: var(--gray-600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-profile:hover {
+    background-color: var(--gray-500);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-500);
+    border-radius: var(--radius-md);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-400);
+}
