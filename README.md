@@ -26,24 +26,29 @@ A modern music streaming web application built with vanilla JavaScript, HTML, an
 
 ## Project Structure
 
+```
 flexitify/
-├── index.html          # Main HTML file
-├── css/               # Stylesheets
-│   ├── variables.css  # CSS variables
-│   ├── layout.css     # Layout styles
-│   ├── components.css # Component styles
-│   ├── player.css     # Music player styles
-│   ├── modals.css     # Modal styles
-│   └── responsive.css # Mobile styles
-├── js/                # JavaScript modules
-│   ├── data.js        # Mock data
-│   ├── ui.js          # UI rendering
-│   ├── navigation.js  # Page navigation
-│   ├── player.js      # Music player logic
-│   ├── search.js      # Search functionality
-│   ├── modal.js       # Modal handling
-│   └── app.js         # Main application
-└── README.md          # Project documentation
+├── index.html              # Main HTML file
+├── README.md               # Project documentation
+├── css/                    # Stylesheets
+│   ├── animations.css      # Animation styles
+│   ├── components.css      # Component styles
+│   ├── layout.css          # Layout styles
+│   ├── modals.css          # Modal styles
+│   ├── pages.css           # Page-specific styles
+│   ├── player.css          # Music player styles
+│   ├── responsive.css      # Mobile styles
+│   └── variables.css       # CSS variables
+└── js/                     # JavaScript modules
+    ├── animations.js       # Animation logic
+    ├── app.js              # Main application
+    ├── data.js             # Mock data
+    ├── modal.js            # Modal handling
+    ├── navigation.js       # Page navigation
+    ├── player.js           # Music player logic
+    ├── search.js           # Search functionality
+    └── ui.js               # UI rendering
+```
 
 ## Browser Support
 
