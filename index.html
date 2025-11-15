@@ -1,254 +1,278 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Flexitify - Listen until you fly to the sky .</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexitify - Your Music Universe</title>
+    <!-- CSS files in order -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/modals.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-music"></i>
+                <span>Flexitify</span>
+            </div>
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/player.css">
-        <link rel="stylesheet" href="css/playlist.css">
-        <link rel="stylesheet" href="css/responsive.css">
-        <link rel="stylesheet" href="css/sidebar.css">
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/search.css">
-    </head>
-
-    <body>
-        <!-- Main Container-->
-         <div class="container">
-
-            <!-- Sidebar nav -->
-             <aside class="sidebar">
-                <div class="logo">
-                    <img src="/assets/images/logo.png" alt="Flexitify" width="200" height="200">
-                    <h1>Flexitify</h1>
+            <nav class="nav-menu">
+                <div class="nav-section">
+                    <a href="#" class="nav-item active" data-page="home">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="search">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="library">
+                        <i class="fas fa-book"></i>
+                        <span>Your Library</span>
+                    </a>
                 </div>
 
-                <nav class="main-nav">
-                    <ul>
-                        <li class="nav-item active" data-section="home">
-                            <img src="assets/icons/home.svg" alt="Home" class="icon">
-                            <span>Home</span>
-                        </li>
-                        <li class="nav-item" data-section="search">
-                            <img src="assets/icons/search.svg" alt="search" class="icon">
-                            <span>Search</span>
-                        </li>
-                        <li class="nav-item" data-section="library">
-                            <img src="assets/icons/library.svg" alt="Library" class="icon">
-                            <span>Your Library</span>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="nav-section">
+                    <a href="#" class="nav-item" data-page="playlists">
+                        <i class="fas fa-list"></i>
+                        <span>Playlists</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="artists">
+                        <i class="fas fa-microphone"></i>
+                        <span>Artists</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="albums">
+                        <i class="fas fa-compact-disc"></i>
+                        <span>Albums</span>
+                    </a>
+                </div>
+            </nav>
 
-                <div class="library-section">
-                    <button class="create-playlist-btn">
-                        <img src="assets/icons/create-playlist.svg" alt="Create" class="icon">
-                        Create Playlist
+            <div class="user-profile">
+                <img src="https://picsum.photos/seed/user1/40/40" alt="User" class="user-avatar">
+                <div class="user-info">
+                    <div class="username">Alex Johnson</div>
+                    <div class="user-type">Premium</div>
+                </div>
+                <button class="settings-btn">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <button class="nav-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="breadcrumb">
+                        <span id="breadcrumb-text">Home</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <button class="upgrade-btn">
+                        <i class="fas fa-crown"></i>
+                        Upgrade
+                    </button>
+                    <button class="notifications-btn">
+                        <i class="fas fa-bell"></i>
                     </button>
                 </div>
+            </header>
 
-                <!-- User Playlist-->
-                 <div class="plaalist-list">
-                    <!--Not yet.-->
-                 </div>
-             </aside>
-
-             <!-- Main Content-->
-              <main class="main-content">
-
-                <!--Top Nav bar -->
-                <header class="top-bar">
-                    <div class="nav-buttons">
-                        <button class="nav-btn" id="back-btn" aria-label="Go back">
-                            <img src="assets/icons/previous.svg" alt="Back" class="icon">
-                        </button>
-                        <button class="nav-btn" id="forward-btn" aria-label="Go forward">
-                            <img src="assets/icons/next.svg" alt="Forward" class="icon">
-                        </button>
-                    </div>
-                </header>
-
-                <!-- Content sections (Req JavaScript.)-->
-                 <section id="home-section" class="content-section active">
-                    <h2 class="section-title">How are you</h2>
-
-                    <div class="recent-grid">
-                        <!--Recently played songs-->
-                    </div>
-
-                    <h2 class="section-title">Made for you </h2>
-                    <div class="playlist-cards">
-                        <!--Playlist Cards-->
-                    </div>
-
-                    <h2 class="section-title">Trending Now</h2>
-                    <div class="playlist-cards">
-                        <!--Trending playlist cards-->
-                    </div>
-                 </section>
-
-                <!-- Search Section -->
-                <section id="search-section" class="content-section" style="display: none;">
-                    <search>
-                        <div class="search-container">
-                            <img src="assets/icons/search.svg" alt="Search" class="search-icon">
-                            <input type="search" id="search-input" placeholder="What do you want to listen to?" aria-label="Search">
+            <!-- Page Content -->
+            <div class="page-content" id="page-content">
+                <!-- Home Page -->
+                <div class="page" id="home-page">
+                    <section class="hero-section">
+                        <div class="hero-content">
+                            <h1>Welcome back, Xacaa!</h1>
+                            <p>Your personal music universe awaits</p>
                         </div>
-                    </search>
-                    
-                    <h2 class="section-title">Browse all</h2>
-                    <div class="genre-grid">
-                        <!-- Genre cards -->
-                    </div>
-                    
-                    <search>
-                        <div id="search-results" class="search-results" style="display: none;">
-                            <!-- Search results will appear here -->
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Recently Played</h2>
+                        <div class="card-grid" id="recently-played">
+                            <!-- Cards will be generated by JavaScript -->
                         </div>
-                    </search>
-                </section>
+                    </section>
 
-                <!-- Library Section-->
-                 <section id="library-section" class="content-section" style="display: none;">
-                    <div class="library-header">
-                        <h2>Your Library</h2>
-                        <button class="btn-icon" aria-label="Add to Library">
-                            <img src="assets/icons/plus.svg" alt="Add" class="icon">
-                        </button>
+                    <section class="content-section">
+                        <h2>Recommended Albums</h2>
+                        <div class="card-grid" id="recommended">
+                            <!-- Cards will be generated by JavaScript -->
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Popular Artists</h2>
+                        <div class="artist-grid" id="popular-artists">
+                            <!-- Artist cards will be generated by JavaScript -->
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Search Page -->
+                <div class="page hidden" id="search-page">
+                    <div class="search-container">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="What do you want to listen to?" id="search-input">
+                        </div>
                     </div>
 
-                    <div class="library-filters">
-                        <button class="filter-btn active">Playlists</button>
-                        <button class="filter-btn">Artists</button>
-                        <button class="filter-btn">Albums</button>
+                    <div class="search-results" id="search-results">
+                        <div class="search-category">
+                            <h3>Top Results</h3>
+                            <div class="search-grid" id="top-results"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Library Page -->
+                <div class="page hidden" id="library-page">
+                    <div class="library-tabs">
+                        <button class="tab-btn active" data-tab="playlists">Playlists</button>
+                        <button class="tab-btn" data-tab="artists">Artists</button>
+                        <button class="tab-btn" data-tab="albums">Albums</button>
+                        <button class="tab-btn" data-tab="podcasts">Podcasts</button>
                     </div>
 
                     <div class="library-content">
-                        <!--Library items-->
-                    </div>
-                 </section>
-
-                 <!-- Playlist/Album Detail Section-->
-                  <section id="detail-section" class="content-section" style="display: none;">
-                    <div class="detail-header">
-                        <img src="" alt="Album Cover" class="content-section" id="detail-cover">
-                        <div class="detail-info">
-                            <span class="detail-type">PLAYLIST</span>
-                            <h1 id="detail-title"></h1>
-                            <p id="detail-description"></p>
-                            <div class="detail-meta">
-                                <span id="detail-owner"></span>
-                                <span id="detail-tracks"></span>
-                            </div>
+                        <div class="tab-content active" id="playlists-tab">
+                            <div class="card-grid" id="library-playlists"></div>
+                        </div>
+                        <div class="tab-content hidden" id="artists-tab">
+                            <div class="artist-grid" id="library-artists"></div>
+                        </div>
+                        <div class="tab-content hidden" id="albums-tab">
+                            <div class="card-grid" id="library-albums"></div>
+                        </div>
+                        <div class="tab-content hidden" id="podcasts-tab">
+                            <div class="card-grid" id="library-podcasts"></div>
                         </div>
                     </div>
-
-                    <div class="detail-actions">
-                        <button class="btn-play-big" aria-label="Play">
-                            <img src="assets/icons/play.svg" alt="Play" class="icon">
-                        </button>
-                        <button class="btn-icon btn-like" aria-label="Like">
-                            <img src="assets/icons/heart-outline.svg" alt="Like" class="icon">
-                        </button>
-                        <button class="btn-icon" aria-label="More Options">
-                            <img src="assets/icons/three-dots-menu.svg" alt="More" class="icon">
-                        </button>
-                    </div>
-
-                    <div class="track-list">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Title</th>
-                                    <th>Album</th>
-                                    <th>Duration</th>
-                                </tr>
-                            </thead>
-                            <tbody id="track-list-body">
-                                <!-- Tracks will be loaded here. -->
-                            </tbody>
-                        </table>
-                    </div>
-                  </section>
-              </main>
-         </div>
-
-         <!-- Bottom Music Player-->
-          <footer class="player-bar">
-            <div class="player-left">
-                <img src="" alt="Now playing" class="now-playing-cover" id="current-cover">
-                <div class="now-playing-info">
-                    <h4 id="current-title">Song Title</h4>
-                    <p id="current-artist">Artist Name</p>
                 </div>
-                <button class="btn-icon btn-like-current" aria-label="Like Song">
-                    <img src="assets/icons/heart-outline.svg" alt="Like" class="icon">
+
+                <!-- Artists Page -->
+                <div class="page hidden" id="artists-page">
+                    <h2 class="page-title">All Artists</h2>
+                    <div class="artist-grid" id="all-artists"></div>
+                </div>
+
+                <!-- Albums Page -->
+                <div class="page hidden" id="albums-page">
+                    <h2 class="page-title">All Albums</h2>
+                    <div class="card-grid" id="all-albums"></div>
+                </div>
+
+                <!-- Playlists Page -->
+                <div class="page hidden" id="playlists-page">
+                    <h2 class="page-title">All Playlists</h2>
+                    <div class="card-grid" id="all-playlists"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Music Player -->
+        <div class="music-player" id="music-player">
+            <div class="player-track">
+                <img src="https://picsum.photos/seed/track1/56/56" alt="Track" class="track-image" id="player-track-image">
+                <div class="track-info">
+                    <div class="track-name" id="player-track-name">No track playing</div>
+                    <div class="track-artist clickable" id="player-track-artist">Select a track to play</div>
+                </div>
+                <button class="favorite-btn" id="favorite-btn">
+                    <i class="far fa-heart"></i>
                 </button>
             </div>
 
-            <div class="player-center">
-                <div class="player-controls">
-                    <button class="btn-control" id="shuffle-btn" aria-label="Shuffle">
-                        <img src="assets/icons/shuffle.svg" alt="Shuffle" class="icon">
-                    </button>
-                    <button class="btn-control" id="prev-btn" aria-label="Previous">
-                        <img src="assets/icons/previous.svg" alt="Previous" class="icon">
-                    </button>
-                    <button class="btn-control-main" id="play-pause-btn" aria-label="Play">
-                        <img src="assets/icons/play.svg" alt="Play" class="icon" id="play-pause-btn">
-                    </button>
-                    <button class="=btn-control" id="next-btn" aria-label="next">
-                        <img src="assets/icons/next.svg" alt="Next" class="icon">
-                    </button>
-                    <button class="btn-control" id="repeat-btn" aria-label="Repeat">
-                        <img src="assets/icons/repeat.svg" alt="Repeat" class="icon">
-                    </button>
-                </div>
+            <div class="player-controls">
+                <button class="control-btn" id="shuffle-btn">
+                    <i class="fas fa-random"></i>
+                </button>
+                <button class="control-btn" id="prev-btn">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="play-btn" id="play-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="control-btn" id="next-btn">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+                <button class="control-btn" id="repeat-btn">
+                    <i class="fas fa-redo"></i>
+                </button>
+                <button class="fullscreen-btn" id="fullscreen-btn">
+                    <i class="fas fa-expand"></i>
+                </button>
+            </div>
 
+            <div class="player-progress">
+                <span class="time" id="current-time">0:00</span>
                 <div class="progress-bar">
-                    <span id="current-time">0:00</span>
-                    <div class="progress-container">
-                        <div class="progress" id="progress"></div>
-                        <input type="range" id="progress-slider" min="0" max="100" value="0" aria-label="Seek">
+                    <div class="progress-fill" id="progress-fill"></div>
+                    <div class="progress-handle" id="progress-handle"></div>
+                </div>
+                <span class="time" id="total-time">0:00</span>
+            </div>
+
+            <div class="player-volume">
+                <button class="volume-btn" id="volume-btn">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <div class="volume-slider">
+                    <div class="volume-fill" id="volume-fill"></div>
+                    <div class="volume-handle" id="volume-handle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Artist Modal -->
+    <div class="modal" id="artist-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="artist-modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="artist-header">
+                <img src="" alt="Artist" class="artist-image" id="modal-artist-image">
+                <div class="artist-info">
+                    <h2 id="modal-artist-name"></h2>
+                    <p id="modal-artist-genre"></p>
+                    <div class="artist-stats">
+                        <span id="modal-artist-followers"></span>
+                        <span id="modal-artist-albums"></span>
                     </div>
-                    <span  id="total-time">0"00</span>
                 </div>
             </div>
-
-            <div class="player-right">
-                <button class="btn-icon" id="queue-btn" aria-label="Queue">
-                    <img src="assets/icons/queue.svg" alt="Queue" class="icon">
-                </button>
-                <button class="btn-icon" id="devices-btn" aria-label="Connect to devices">
-                    <img src="assets/icons/devices.svg" alt="Devices" class="icon">
-                </button>
-                <button class="btn-icon" id="volume-btn" aria-label="Volume">
-                    <img src="assets/icons/volume-high.svg" alt="Volume" class="icon" id="volume-icon">
-                </button>
-
-                <div class="Volume-container">
-                    <input type="range" id="volume-slider" min="0" max="100" value="70" aria-label="Volume-control">
-                </div>
-                <button class="btn-icon" id="fullscreen-btn" aria-label="Fullscreen">
-                    <img src="assets/icons/fullscreen.svg" alt="Fullscreen" class="icon">
-                </button>
+            <div class="artist-tracks">
+                <h3>Popular Tracks</h3>
+                <div class="track-list" id="artist-tracks-list"></div>
             </div>
-          </footer>
+        </div>
+    </div>
 
-          <!--Hidden audio Elements-->
-          <audio id="audio-player" preload="metadata"></audio>
-
-          <!--JavaScript-->
-          <script src="js/config.js"></script>
-          <script src="js/data.js"></script>
-          <script src="js/library.js"></script>
-          <script src="js/player.js"></script>
-          <script src="js/playlist.js"></script>
-          <script src="js/script.js"></script>
-          <script src="js/search.js"></script>
-          <script src="js/utils.js"></script>
-    </body>
+    <!-- JS modules with proper dependencies -->
+    <script src="js/data.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/app.js"></script>
+</body>
 </html>

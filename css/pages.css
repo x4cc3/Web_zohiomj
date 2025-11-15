@@ -1,0 +1,56 @@
+.hero-section {
+    background: var(--gradient-secondary);
+    padding: 40px 32px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -5%;
+    width: 200px;
+    height: 200px;
+    background: var(--gradient-accent);
+    border-radius: var(--radius-full);
+    opacity: 0.3;
+    filter: blur(40px);
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    position: relative;
+    z-index: 1;
+}
+
+.content-section {
+    margin-bottom: 40px;
+}
+
+.content-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 32px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
